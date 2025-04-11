@@ -1,0 +1,48 @@
+.claude
+AGENTS.md
+CLAUDE.md
+
+# caches & temp
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+*$py.class
+
+# dist
+dist/
+build/
+.Python
+develop-eggs/
+eggs/
+.eggs/
+lib/
+lib64/
+
+# Installer logs
+pip-delete-this-directory.txt
+pip-log.txt
+
+# Unit test / coverage reports
+.nox/
+.coverage
+.tox/
+.coverage.*
+htmlcov/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# tooling
+.DS_Store
+*.db
+.env
+.venv
+.vscode/
+.idea/
+.ipynb_checkpoints
+
+# pyenv
+.python-version
