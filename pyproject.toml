@@ -1,0 +1,11 @@
+[project]
+name = "table2db"
+version = "0.1.0"
+description = "Load CSV/TSV into SQLite with schema inference"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [ { name = "Max", email = "max@example.com" } ]
+
+[project.scripts]
+table2db = "table2db.cli:main"
+
