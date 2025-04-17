@@ -9,6 +9,11 @@ Features
 - Handle CSV and TSV with configurable delimiter
 - Simple CLI: point at a file, pick a table, done
 
+Limitations (for now)
+- No headerless files yet; expects a header row
+- No streaming type refinement beyond initial sample
+- Minimal error handling; early days
+
 Status
 - Work in progress. Personal side project done in small evening/weekend chunks.
 
@@ -16,3 +21,7 @@ Quick sketch
 - `table2db load data.csv --table sales --db app.db`
 - `table2db load data.tsv --table notes --db app.db --delimiter '\t'`
 
+Dev notes
+- Python 3.9+
+- Optional: `pytest -q` for tests
+- Edit in small, focused changes like a normal side project
