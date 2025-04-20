@@ -2,6 +2,7 @@ import argparse
 import sqlite3
 from pathlib import Path
 from .core import load_table
+from .util import normalize_delimiter
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -24,7 +25,8 @@ def main(argv=None) -> int:
 
     conn = sqlite3.connect(args.db)
     try:
-        load_table(conn, args.file, args.table, delimiter=args.delimiter, sample_rows=args.sample, append=args.append)
+        delim = normalize_delimiter(args.delimiter)
+        load_table(conn, args.file, args.table, delimiter=delim, sample_rows=args.sample, append=args.append)
     finally:
         conn.close()
     return 0
@@ -32,4 +34,3 @@ def main(argv=None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
